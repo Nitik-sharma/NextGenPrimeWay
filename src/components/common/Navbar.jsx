@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Logo from '../../assets/Images/newPrimeLogo.jpeg'
+import Logo from '../../assets/Images/logonav.png'
 
 const NAV_LINKS = [
   { label: "Home", path: "/" },
@@ -111,7 +111,7 @@ export default function Navbar() {
                 className="flex items-end gap-3 flex-shrink-0"
                 aria-label="NextGen PrimeWay Solutions"
               >
-                <img src={Logo} alt="" className=" w-20 h-20"/>
+                <img src={Logo} alt="" className="w-35 h-18"/>
                 
               </Link>
 

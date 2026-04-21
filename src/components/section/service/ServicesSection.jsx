@@ -42,7 +42,7 @@ export default function ServicesSection() {
 
       {/* header */}
       <div className="text-center mb-12 relative z-10">
-        <p className="text-[12px] font-semibold tracking-[2.5px] uppercase text-[#22a05b] mb-3 font-['Poppins']">
+        <p className="text-2xl font-semibold tracking-[2.5px] uppercase text-[#22a05b] mb-3 font-['Poppins']">
           What We Offer
         </p>
         <h2 className="text-[32px] font-bold text-white leading-tight font-['Poppins'] max-md:text-[24px]">

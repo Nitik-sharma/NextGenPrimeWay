@@ -1,25 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import background from '../../../assets/Images/HeroBackGround.avif'
-/**
- * HeroSection
- * ─ Full-viewport background image (aerial highway/road)
- * ─ Dark gradient overlay for readability
- * ─ Exact heading & subtitle from client brief
- * ─ Two CTA buttons: "Our Services →" (green) + "Contact Us" (outline)
- * ─ Scroll-down indicator
- * ─ Animated text reveal on mount
- */
 
-/* 
-  Using a high-quality free Unsplash aerial highway image.
-  Replace HERO_IMAGE with your own image path once you have it:
-  e.g. import heroBg from "../../assets/images/hero-bg.jpg";
-  then: backgroundImage: `url(${heroBg})`
-*/
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1920&q=85";
-// aerial highway through green mountains — matches client image perfectly
 
 export default function HeroSection() {
   const [visible, setVisible] = useState(false);
@@ -74,7 +56,7 @@ export default function HeroSection() {
               aria-hidden="true"
             />
             <span
-              className="text-[13px] font-semibold tracking-widest uppercase text-white/80"
+              className="text-xl font-semibold tracking-widest uppercase text-white/80"
               style={{ fontFamily: "'Poppins', Arial, sans-serif" }}
             >
               NextGen PrimeWay Solutions

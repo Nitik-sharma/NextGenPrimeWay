@@ -70,8 +70,8 @@ export default function AboutSection() {
           }`}
         >
           {/* eyebrow */}
-          <p className="flex items-center gap-2 text-[12px] font-semibold tracking-[2.5px] uppercase text-[#22a05b] mb-4 font-['Poppins']">
-            <span className="w-7 h-[2px] bg-[#22a05b] rounded"></span>
+          <p className="flex items-center gap-2 text-2xl font-semibold tracking-[2.5px] uppercase text-[#22a05b] mb-4 font-['Poppins']">
+            <span className="w-7  h-[2px] bg-[#22a05b] rounded"></span>
             About Us
           </p>
 
