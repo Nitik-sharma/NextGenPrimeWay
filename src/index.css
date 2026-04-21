@@ -1,0 +1,12 @@
+@import "tailwindcss";
+/* Global */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+}
