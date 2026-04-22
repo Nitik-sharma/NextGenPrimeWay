@@ -1,7 +1,8 @@
 import React from "react";
 import HeroSection from "../../section/Home/HeroSection";
-import ServicesSection from "../../section/service/ServicesSection";
-import AboutSection from "../../section/About/Aboutsection";
+import ServicesSection from "../../section/Home/ServicesSection";
+import AboutSection from "../../section/Home/Aboutsection";
+import ProjectsSection from "../../section/Home/Projectssection";
 
 function GreenWaveDivider() {
   return (
@@ -32,7 +33,8 @@ function Home() {
       <HeroSection />
       <GreenWaveDivider />
           <ServicesSection />
-          <AboutSection/>
+      <AboutSection />
+      <ProjectsSection/>
     </>
   );
 }
