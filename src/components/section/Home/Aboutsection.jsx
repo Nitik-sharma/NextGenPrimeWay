@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import AboutImage from "../../../assets/Images/About section.avif";
+import { NavLink } from "react-router-dom";
+
 
 const features = [
   "Toll Management",
@@ -55,7 +57,7 @@ export default function AboutSection() {
           {/* badge */}
           <div className="absolute bottom-[-20px] right-[-20px] bg-[#0d3a6e] text-white rounded-[16px] px-6 py-4 text-center shadow-[0_12px_32px_rgba(13,58,110,0.28)] z-[2]">
             <span className="block text-[28px] font-extrabold text-[#22a05b] leading-none font-['Poppins']">
-              15+
+              5+
             </span>
             <span className="block text-[11px] text-[#a0b8d0] mt-1 whitespace-nowrap">
               Years of Excellence
@@ -74,19 +76,16 @@ export default function AboutSection() {
             <span className="w-7  h-[2px] bg-[#22a05b] rounded"></span>
             About Us
           </p>
-
           {/* heading */}
           <h2 className="text-[36px] font-extrabold text-[#0d3a6e] leading-tight mb-2 font-['Poppins'] max-[900px]:text-[28px]">
             NextGen <span className="text-[#22a05b]">PrimeWay</span>
             <br />
             Solutions LLP
           </h2>
-
           {/* subheading */}
           <p className="text-[16px] font-semibold text-[#1a6fc4] italic mb-5 font-['Poppins']">
             Pioneers in Infrastructure Development
           </p>
-
           {/* description */}
           <p className="text-[15px] text-[#4a5568] leading-[1.8] mb-8">
             Welcome to NextGen PrimeWay Solutions LLP, where innovation meets
@@ -95,7 +94,6 @@ export default function AboutSection() {
             solutions, delivering projects that drive growth & connectivity
             across the nation.
           </p>
-
           {/* features */}
           <div className="flex flex-wrap gap-2 mb-9">
             {features.map((f) => (
@@ -108,11 +106,10 @@ export default function AboutSection() {
               </span>
             ))}
           </div>
-
           {/* button */}
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#0d3a6e] to-[#1a6fc4] text-white text-[14px] font-semibold px-8 py-3.5 rounded-full shadow-[0_6px_24px_rgba(26,111,196,0.3)] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(26,111,196,0.4)] font-['Poppins']"
+          <NavLink
+            to="/about"
+            className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-[#0d3a6e] to-[#1a6fc4] text-white text-[14px] font-semibold px-8 py-3.5 rounded-full shadow-[0_6px_24px_rgba(26,111,196,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(26,111,196,0.4)] font-['Poppins']"
           >
             Learn More
             <svg
@@ -120,7 +117,7 @@ export default function AboutSection() {
               height="16"
               viewBox="0 0 16 16"
               fill="none"
-              className="transition-transform group-hover:translate-x-1"
+              className="transition-transform duration-300 group-hover:translate-x-1"
             >
               <path
                 d="M3 8h10M9 4l4 4-4 4"
@@ -130,7 +127,7 @@ export default function AboutSection() {
                 strokeLinejoin="round"
               />
             </svg>
-          </a>
+          </NavLink>
         </div>
       </div>
     </section>

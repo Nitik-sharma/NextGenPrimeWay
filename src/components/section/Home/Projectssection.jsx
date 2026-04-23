@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
 import {
   ClipboardList,
   Users,
@@ -187,8 +188,8 @@ export default function ProjectsSection() {
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
       >
-        <a
-          href="#contact"
+        <NavLink
+          to="/contact"
           className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#0d3a6e] to-[#1a6fc4] text-white text-[14px] font-semibold px-8 py-3.5 rounded-full shadow-[0_6px_24px_rgba(26,111,196,0.3)] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(26,111,196,0.4)] font-['Poppins']"
         >
           Start Your Project
@@ -207,7 +208,7 @@ export default function ProjectsSection() {
               strokeLinejoin="round"
             />
           </svg>
-        </a>
+        </NavLink>
       </div>
 
       {/* ── KEYFRAME ANIMATION (matches ServicesSection) ── */}

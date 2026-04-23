@@ -161,9 +161,9 @@ export default function HeroSection() {
             }}
           >
             {[
-              { value: "200+", label: "Projects Delivered" },
+              { value: "100+", label: "Projects Delivered" },
               { value: "98%", label: "Client Satisfaction" },
-              { value: "12+", label: "Countries Served" },
+              { value: "32+", label: "States Covered" },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col">
                 <span
