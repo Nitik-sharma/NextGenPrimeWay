@@ -1,5 +1,10 @@
 import React from "react";
-import { Landmark, Route, Cpu } from "lucide-react";
+
+// ── Replace these with your actual image imports ──────────────
+import tollImg from "../../../assets/Images/Tolls/8.jpeg";
+import roadImg from "../../../assets/Images/Roads/14.jpg";
+import smartImg from "../../../assets/Images/Planning/12 (1).jpeg";
+// ─────────────────────────────────────────────────────────────
 
 const services = [
   {
@@ -9,7 +14,8 @@ const services = [
       "Efficient toll collection and management solutions tailored for seamless operations and revenue optimization.",
     accent: "#1a6fc4",
     badge: null,
-    icon: <Landmark size={30} strokeWidth={1.6} color="#1a6fc4" />,
+    image: tollImg,
+    alt: "Toll management operations",
   },
   {
     id: 2,
@@ -18,7 +24,8 @@ const services = [
       "Planning, developing, and maintaining state-of-the-art roads, highways, and bridges.",
     accent: "#22a05b",
     badge: "Core Service",
-   icon: <Route size={30} strokeWidth={1.6} color="#22a05b" />,
+    image: roadImg,
+    alt: "Road and highway construction",
   },
   {
     id: 3,
@@ -27,7 +34,8 @@ const services = [
       "Innovative technology integration for smart cities, highway, and toll systems.",
     accent: "#1a6fc4",
     badge: null,
-    icon: <Cpu size={30} strokeWidth={1.6} color="#1a6fc4" />,
+    image: smartImg,
+    alt: "Smart infrastructure technology",
   },
 ];
 
@@ -58,7 +66,7 @@ export default function ServicesSection() {
           return (
             <div
               key={service.id}
-              className={`group relative flex flex-col items-center text-center bg-white rounded-2xl px-7 py-9 border-t-[4px] transition-all duration-300
+              className={`group relative flex flex-col bg-white rounded-2xl overflow-hidden border-t-[4px] transition-all duration-300
               hover:-translate-y-1 hover:shadow-[0_20px_48px_rgba(0,0,0,0.18)]
               ${service.badge ? "shadow-[0_8px_32px_rgba(34,160,91,0.18)]" : ""}
               animate-[fadeUp_0.5s_ease_forwards] opacity-0`}
@@ -68,35 +76,43 @@ export default function ServicesSection() {
               }}
             >
               {/* badge */}
-              {service.badge && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#22a05b] text-white text-[11px] font-semibold px-4 py-1 rounded-full whitespace-nowrap font-['Poppins']">
-                  {service.badge}
-                </span>
-              )}
+              
 
-              {/* icon */}
-              <div
-                className={`w-20 h-20 rounded-full flex items-center justify-center mb-5 transition-colors duration-200
-                ${isGreen ? "bg-[#e8f5ee]" : "bg-[#e8f1fb]"}
-                group-hover:${isGreen ? "bg-[#dff3e8]" : "bg-[#edf5ff]"}`}
-              >
-                {service.icon}
+              {/* image */}
+              <div className="relative w-full h-[180px] overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                {/* subtle colour tint on hover */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                  style={{ background: service.accent }}
+                />
               </div>
 
-              {/* title */}
-              <h3
-                className="text-[17px] font-bold mb-3 font-['Poppins']"
-                style={{
-                  color: isGreen ? service.accent : "#0d3a6e",
-                }}
-              >
-                {service.title}
-              </h3>
+              {/* text content */}
+              <div className="flex flex-col items-center text-center px-7 py-6">
+                {/* accent line */}
+                <span
+                  className="w-10 h-[3px] rounded-full mb-4"
+                  style={{ background: service.accent }}
+                />
 
-              {/* description */}
-              <p className="text-[14px] text-[#4a5568] leading-[1.7]">
-                {service.description}
-              </p>
+                {/* title */}
+                <h3
+                  className="text-[17px] font-bold mb-3 font-['Poppins']"
+                  style={{ color: isGreen ? service.accent : "#0d3a6e" }}
+                >
+                  {service.title}
+                </h3>
+
+                {/* description */}
+                <p className="text-[14px] text-[#4a5568] leading-[1.7]">
+                  {service.description}
+                </p>
+              </div>
             </div>
           );
         })}

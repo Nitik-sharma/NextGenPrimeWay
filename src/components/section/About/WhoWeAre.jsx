@@ -5,7 +5,7 @@ const cards = [
   { label: "Legally Registered & Compliant", icon: ShieldCheck },
   { label: "Technology-Driven Operations", icon: Cpu },
   { label: "Structured & Process-Oriented", icon: LayoutList },
-  { label: "Client-Focused Execution", icon: Users },
+  { label: "Client-Focused Execution",   icon: Users },
 ];
 
 const WhoWeAre = () => {

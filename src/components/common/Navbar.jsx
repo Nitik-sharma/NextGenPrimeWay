@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Logo from '../../assets/Images/logonav.png'
+import Logo from '../../assets/Images/logo/logonav.png'
 
 const NAV_LINKS = [
   { label: "Home", path: "/" },
@@ -88,14 +88,7 @@ export default function Navbar() {
                   info@example.com
                 </a>
 
-                <a
-                  href="/contact"
-                  className="hidden sm:inline-block px-5 py-[5px] rounded-full text-white text-[12px] font-semibold
-                             bg-[#6BAF45] hover:bg-[#1F5A7A] transition-colors duration-300"
-                  style={{ fontFamily: "'Poppins', Arial, sans-serif" }}
-                >
-                  Get a Quote
-                </a>
+                
               </div>
             </div>
           </div>
@@ -143,14 +136,7 @@ export default function Navbar() {
 
               {/* MOBILE: Quote + Hamburger */}
               <div className="flex lg:hidden items-center gap-3">
-                <a
-                  href="/contact"
-                  className="px-4 py-[5px] rounded-full text-white text-[11px] font-semibold
-                             bg-[#6BAF45] hover:bg-[#1F5A7A] transition-colors duration-300"
-                  style={{ fontFamily: "'Poppins', Arial, sans-serif" }}
-                >
-                  Get a Quote
-                </a>
+               
 
                 {/* ── ANIMATED HAMBURGER → CROSS BUTTON ── */}
                 <button
@@ -401,16 +387,7 @@ export default function Navbar() {
             info@example.com
           </a>
 
-          <a
-            href="/contact"
-            onClick={close}
-            className="mt-1 w-full flex items-center justify-center py-3 rounded-full
-                       text-white text-[13px] font-semibold
-                       bg-[#6BAF45] hover:bg-[#1F5A7A] transition-colors duration-300"
-            style={{ fontFamily: "'Poppins', Arial, sans-serif" }}
-          >
-            Get a Free Quote
-          </a>
+          
         </div>
       </aside>
     </>
